@@ -2,27 +2,36 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
 
+
+
+
+
+
+
   
   
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
-
-
-
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -45,10 +54,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -57,45 +62,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="来自智能计算的一名小硕">
-<meta property="og:type" content="website">
-<meta property="og:title" content="yitakabe">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="yitakabe">
-<meta property="og:description" content="来自智能计算的一名小硕">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yitakabe">
-<meta name="twitter:description" content="来自智能计算的一名小硕">
 
 
 
@@ -104,15 +89,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.3',
+    version: '6.3.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -124,14 +107,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="来自cs的一名渣硕">
+<meta property="og:type" content="website">
+<meta property="og:title" content="yitakabe">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="yitakabe">
+<meta property="og:description" content="来自cs的一名渣硕">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yitakabe">
+<meta name="twitter:description" content="来自cs的一名渣硕">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/"/>
 
 
 
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
-
-  <title>yitakabe</title>
+  <title>yitakabe &mdash; A good brain is not as good as a rotten pen</title>
   
 
 
@@ -141,9 +148,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -160,19 +195,21 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">yitakabe</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle">对于新技术的折腾，从未停止过，一切尽在瞎折腾中~</p>
+        <h1 class="site-subtitle" itemprop="description">A good brain is not as good as a rotten pen</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -180,102 +217,98 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-喜好">
+    <a href="/favorites/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />喜好</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-读书">
+    <a href="/books" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />读书</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            搜索
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
 
-
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -288,16 +321,18 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/31/机器学习/深度学习/深度学习识别验证码/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/30/Python/pipenv的基本使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="来自cs的一名渣硕">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -310,13 +345,23 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/31/机器学习/深度学习/深度学习识别验证码/" itemprop="url">深度学习识别验证码</a></h1>
+                <a class="post-title-link" href="/2018/05/30/Python/pipenv的基本使用/" itemprop="url">
+                  pipenv的基本使用
+                </a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -324,13 +369,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-31T10:18:39+08:00">
-                2018-01-31
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-05-30 09:44:43 / 修改时间：11:34:33" itemprop="dateCreated datePublished" datetime="2018-05-30T09:44:43+08:00">2018-05-30</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -346,11 +396,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/深度学习/" itemprop="url" rel="index">
-                    <span itemprop="name">深度学习</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
 
                 
                 
@@ -359,17 +405,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/31/机器学习/深度学习/深度学习识别验证码/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/31/机器学习/深度学习/深度学习识别验证码/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -389,17 +424,19 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
 
       
         
-          <p>最近研究了一个毛！<br></p>
+          <p>pipenv 是 Pipfile 主要倡导者、requests 作者 Kenneth Reitz 写的一个命令行工具，主要包含了Pipfile、pip、click、requests和virtualenv。Pipfile和pipenv本来都是Kenneth Reitz的个人项目，后来贡献给了pypa组织。Pipfile是社区拟定的依赖管理文件，用于替代过于简陋的 requirements.txt 文件。</p>
+<p>Pipfile的基本理念是：</p>
+<p>Pipfile 文件是 TOML 格式而不是 requirements.txt 这样的纯文本。<br>一个项目对应一个 Pipfile，支持开发环境与正式环境区分。默认提供 default 和 development 区分。<br>提供版本锁支持，存为 Pipfile.lock。<br>click是Flask作者 Armin Ronacher 写的命令行库，现在Flask已经集成了它。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/01/31/机器学习/深度学习/深度学习识别验证码/#more" rel="contents">
+            <a class="btn" href="/2018/05/30/Python/pipenv的基本使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -407,6 +444,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -445,6 +485,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -454,7 +496,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="来自cs的一名渣硕">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -467,13 +509,23 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/07/前端/Vue/Vue2学习笔记/" itemprop="url">Vue2.0 学习笔记</a></h1>
+                <a class="post-title-link" href="/2018/01/07/前端/Vue/Vue2学习笔记/" itemprop="url">
+                  Vue2.0 学习笔记
+                </a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -481,13 +533,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-07T02:27:59+08:00">
-                2018-01-07
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-01-07 02:27:59" itemprop="dateCreated datePublished" datetime="2018-01-07T02:27:59+08:00">2018-01-07</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-01-08 12:29:45" itemprop="dateModified" datetime="2018-01-08T12:29:45+08:00">2018-01-08</time>
+              
             
           </span>
 
@@ -503,11 +572,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
 
                 
                 
@@ -516,17 +581,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/01/07/前端/Vue/Vue2学习笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/01/07/前端/Vue/Vue2学习笔记/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -546,7 +600,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -564,6 +618,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -600,6 +657,182 @@
 
   
   
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/01/机器学习/深度学习/深度学习识别验证码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="尔了个达">
+      <meta itemprop="description" content="来自cs的一名渣硕">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yitakabe">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/01/机器学习/深度学习/深度学习识别验证码/" itemprop="url">
+                  深度学习识别验证码
+                </a>
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-01-01 10:18:39" itemprop="dateCreated datePublished" datetime="2018-01-01T10:18:39+08:00">2018-01-01</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-01-31 10:44:54" itemprop="dateModified" datetime="2018-01-31T10:44:54+08:00">2018-01-31</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/深度学习/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>最近研究了一个毛！<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/01/01/机器学习/深度学习/深度学习识别验证码/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -611,7 +844,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="来自cs的一名渣硕">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -624,13 +857,23 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/12/03/Docker/Docker基本使用/" itemprop="url">Docker镜像的基本操作</a></h1>
+                <a class="post-title-link" href="/2017/12/03/Docker/Docker基本使用/" itemprop="url">
+                  Docker镜像的基本操作
+                </a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -638,13 +881,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-03T22:27:59+08:00">
-                2017-12-03
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-03 22:27:59" itemprop="dateCreated datePublished" datetime="2017-12-03T22:27:59+08:00">2017-12-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-05-30 12:13:23" itemprop="dateModified" datetime="2018-05-30T12:13:23+08:00">2018-05-30</time>
+              
             
           </span>
 
@@ -660,11 +920,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Docker/" itemprop="url" rel="index">
-                    <span itemprop="name">Docker</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a></span>
 
                 
                 
@@ -673,17 +929,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/12/03/Docker/Docker基本使用/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/12/03/Docker/Docker基本使用/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -703,17 +948,17 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
 
       
         
-          本文主要记录了笔者实践《Docker技术入门与实践》过程中做的一些笔记，笔记内容主要是Docker镜像的基本操作。
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;本文主要记录了笔者实践《Docker技术入门与实践》过程中做的一些笔记，笔记内容主要是Docker镜像的基本操作。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/12/03/Docker/Docker基本使用/">
+            <a class="btn" href="/2017/12/03/Docker/Docker基本使用/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -721,6 +966,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -759,6 +1007,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -768,7 +1018,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="来自cs的一名渣硕">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -781,13 +1031,23 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/07/嵌入式/编程/通过函数指针进行初始化/" itemprop="url">通过函数指针进行初始化</a></h1>
+                <a class="post-title-link" href="/2017/09/07/嵌入式/编程/通过函数指针进行初始化/" itemprop="url">
+                  通过函数指针进行初始化
+                </a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -795,13 +1055,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-07T19:35:47+08:00">
-                2017-09-07
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-09-07 19:35:47" itemprop="dateCreated datePublished" datetime="2017-09-07T19:35:47+08:00">2017-09-07</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-01-30 13:59:09" itemprop="dateModified" datetime="2018-01-30T13:59:09+08:00">2018-01-30</time>
+              
             
           </span>
 
@@ -817,11 +1094,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/嵌入式/" itemprop="url" rel="index">
-                    <span itemprop="name">嵌入式</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/嵌入式/" itemprop="url" rel="index"><span itemprop="name">嵌入式</span></a></span>
 
                 
                 
@@ -830,17 +1103,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/09/07/嵌入式/编程/通过函数指针进行初始化/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/07/嵌入式/编程/通过函数指针进行初始化/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -860,7 +1122,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -874,6 +1136,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -912,6 +1177,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -921,7 +1188,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="来自cs的一名渣硕">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -934,13 +1201,23 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/03/机器学习/梯度下降-吴恩达公开课笔记/" itemprop="url">梯度下降(吴恩达公开课笔记)</a></h1>
+                <a class="post-title-link" href="/2017/09/03/机器学习/梯度下降-吴恩达公开课笔记/" itemprop="url">
+                  梯度下降(吴恩达公开课笔记)
+                </a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -948,13 +1225,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T20:39:15+08:00">
-                2017-09-03
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-09-03 22:39:15" itemprop="dateCreated datePublished" datetime="2017-09-03T22:39:15+08:00">2017-09-03</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-01-31 10:44:38" itemprop="dateModified" datetime="2018-01-31T10:44:38+08:00">2018-01-31</time>
+              
             
           </span>
 
@@ -970,11 +1264,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
 
                 
                 
@@ -983,17 +1273,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/09/03/机器学习/梯度下降-吴恩达公开课笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/03/机器学习/梯度下降-吴恩达公开课笔记/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1013,7 +1292,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1031,6 +1310,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1069,6 +1351,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1078,7 +1362,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="来自cs的一名渣硕">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -1091,13 +1375,23 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/02/数据处理/数据处理算法/时间序列算法/时间序列算法/" itemprop="url">时间序列算法</a></h1>
+                <a class="post-title-link" href="/2017/09/02/数据处理/数据处理算法/时间序列算法/时间序列算法/" itemprop="url">
+                  时间序列算法
+                </a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1105,13 +1399,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-02T17:07:50+08:00">
-                2017-09-02
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-09-02 17:07:50" itemprop="dateCreated datePublished" datetime="2017-09-02T17:07:50+08:00">2017-09-02</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-09-04 09:48:27" itemprop="dateModified" datetime="2017-09-04T09:48:27+08:00">2017-09-04</time>
+              
             
           </span>
 
@@ -1127,11 +1438,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数字信号处理/" itemprop="url" rel="index">
-                    <span itemprop="name">数字信号处理</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数字信号处理/" itemprop="url" rel="index"><span itemprop="name">数字信号处理</span></a></span>
 
                 
                 
@@ -1140,17 +1447,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/09/02/数据处理/数据处理算法/时间序列算法/时间序列算法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/02/数据处理/数据处理算法/时间序列算法/时间序列算法/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1170,7 +1466,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1188,163 +1484,9 @@
         
       
     </div>
-    
-    
-    
 
     
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/02/机器学习/机器学习简介/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yitakabe">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/02/机器学习/机器学习简介/" itemprop="url">机器学习简介</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-02T13:39:59+08:00">
-                2017-09-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/09/02/机器学习/机器学习简介/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/02/机器学习/机器学习简介/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="1、机器学习三要素"><a href="#1、机器学习三要素" class="headerlink" title="1、机器学习三要素"></a>1、机器学习三要素</h1>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/02/机器学习/机器学习简介/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
     
     
     
@@ -1381,6 +1523,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1392,7 +1536,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="来自cs的一名渣硕">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -1405,13 +1549,23 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/02/机器学习/Logistic函数/" itemprop="url">Logistic函数</a></h1>
+                <a class="post-title-link" href="/2017/09/02/机器学习/Logistic函数/" itemprop="url">
+                  Logistic函数
+                </a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1419,13 +1573,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-02T13:39:59+08:00">
-                2017-09-02
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-09-02 13:39:59" itemprop="dateCreated datePublished" datetime="2017-09-02T13:39:59+08:00">2017-09-02</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-01-30 14:16:33" itemprop="dateModified" datetime="2018-01-30T14:16:33+08:00">2018-01-30</time>
+              
             
           </span>
 
@@ -1441,11 +1612,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
 
                 
                 
@@ -1454,17 +1621,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/09/02/机器学习/Logistic函数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/02/机器学习/Logistic函数/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1484,7 +1640,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1502,6 +1658,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1540,16 +1699,18 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/30/嵌入式/基于RK3188平台与Android5.1的AP6212蓝牙与wifi调试记录/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/02/机器学习/机器学习简介/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="来自cs的一名渣硕">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -1562,13 +1723,23 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/30/嵌入式/基于RK3188平台与Android5.1的AP6212蓝牙与wifi调试记录/" itemprop="url">基于RK3188平台与Android5.1的AP6212蓝牙与wifi调试记录</a></h1>
+                <a class="post-title-link" href="/2017/09/02/机器学习/机器学习简介/" itemprop="url">
+                  机器学习简介
+                </a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1576,13 +1747,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-30T11:21:46+08:00">
-                2017-08-30
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-09-02 13:39:59" itemprop="dateCreated datePublished" datetime="2017-09-02T13:39:59+08:00">2017-09-02</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2017-09-04 09:48:30" itemprop="dateModified" datetime="2017-09-04T09:48:30+08:00">2017-09-04</time>
+              
             
           </span>
 
@@ -1598,11 +1786,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/嵌入式/" itemprop="url" rel="index">
-                    <span itemprop="name">嵌入式</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/机器学习/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a></span>
 
                 
                 
@@ -1611,17 +1795,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/30/嵌入式/基于RK3188平台与Android5.1的AP6212蓝牙与wifi调试记录/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/30/嵌入式/基于RK3188平台与Android5.1的AP6212蓝牙与wifi调试记录/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1641,17 +1814,17 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
 
       
         
-          <p>&emsp;&emsp;最近调试了一款基于RK3188与Android5.1的板子，蓝牙和wifi的芯片采用的是AP6212，AP6212文档在<a href="相关文档\AP6212_V1.1_09022014.pdf"><strong>这里</strong></a>。存在的问题是Wifi和蓝牙都不能扫描设备。<br></p>
+          <h1 id="1、机器学习三要素"><a href="#1、机器学习三要素" class="headerlink" title="1、机器学习三要素"></a>1、机器学习三要素</h1>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/08/30/嵌入式/基于RK3188平台与Android5.1的AP6212蓝牙与wifi调试记录/#more" rel="contents">
+            <a class="btn" href="/2017/09/02/机器学习/机器学习简介/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1659,6 +1832,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1695,6 +1871,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1706,7 +1884,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="尔了个达">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="来自cs的一名渣硕">
       <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
@@ -1719,13 +1897,23 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/08/30/数据处理/数据分析/数据质量分析/" itemprop="url">数据质量分析</a></h1>
+                <a class="post-title-link" href="/2017/08/30/数据处理/数据分析/数据质量分析/" itemprop="url">
+                  数据质量分析
+                </a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1733,13 +1921,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-30T11:21:46+08:00">
-                2017-08-30
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-08-30 11:21:46" itemprop="dateCreated datePublished" datetime="2017-08-30T11:21:46+08:00">2017-08-30</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-01-30 14:35:29" itemprop="dateModified" datetime="2018-01-30T14:35:29+08:00">2018-01-30</time>
+              
             
           </span>
 
@@ -1755,11 +1960,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数据分析/" itemprop="url" rel="index">
-                    <span itemprop="name">数据分析</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据分析/" itemprop="url" rel="index"><span itemprop="name">数据分析</span></a></span>
 
                 
                 
@@ -1768,17 +1969,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/08/30/数据处理/数据分析/数据质量分析/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/08/30/数据处理/数据分析/数据质量分析/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1798,7 +1988,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1816,6 +2006,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -1849,12 +2042,13 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -1886,98 +2080,129 @@
                 alt="尔了个达" />
             
               <p class="site-author-name" itemprop="name">尔了个达</p>
-              <p class="site-description motion-element" itemprop="description">来自智能计算的一名小硕</p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives">
-              
-                  <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          <div class="links-of-author motion-element">
-            
-              
-                <span class="links-of-author-item">
-                  <a href="https://github.com/" target="_blank" title="GitHub">
-                    
-                      <i class="fa fa-fw fa-github"></i>GitHub</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="yitakabe@gmail.com" target="_blank" title="E-Mail">
-                    
-                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://plus.google.com/" target="_blank" title="Google">
-                    
-                      <i class="fa fa-fw fa-google"></i>Google</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://twitter.com/" target="_blank" title="Twitter">
-                    
-                      <i class="fa fa-fw fa-twitter"></i>Twitter</a>
-                </span>
-              
-            
+              <p class="site-description motion-element" itemprop="description">来自cs的一名渣硕</p>
           </div>
 
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
           
 
           
+
           
-            <div class="links-of-blogroll motion-element links-of-blogroll-block">
-              <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-link"></i>
-                友情链接
-              </div>
-              <ul class="links-of-blogroll-list">
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.baidu.com/" title="百度" target="_blank">百度</a>
-                  </li>
-                
-              </ul>
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/weiyd" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yitakabe@gmail.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
             </div>
           
 
+          
+          
+
+          
+          
+
+          
+            
+          
           
 
         </div>
@@ -2005,44 +2230,29 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">尔了个达</span>
 
   
+
+  
 </div>
 
 
+  
 
 
 
 
 
 
-<div>
-<p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
-</div>
+
+
+
+
         
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
 
 
 
@@ -2057,12 +2267,6 @@
 
     
 
-    
-      <div id="needsharebutton-float">
-        <span class="btn">
-          <i class="fa fa-share-alt" aria-hidden="true"></i>
-        </span>
-      </div>
     
 
   </div>
@@ -2083,7 +2287,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -2103,16 +2311,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -2121,18 +2319,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
 
 
 
@@ -2140,9 +2333,9 @@
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
 
 
 
@@ -2151,23 +2344,11 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
 
 
 
   
-
-
-  
-
-    
-      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -2194,518 +2375,159 @@
 
 
 
+  
+
+
+
 
 
   
 
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  
 
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
+  
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
+  
+  
 
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
+  
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
 
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
     });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
-  
-  <script>
-    (function () {
-
-      firebase.initializeApp({
-        apiKey: '',
-        projectId: ''
-      })
-
-      function getCount(doc, increaseCount) {
-        //increaseCount will be false when not in article page
-
-        return doc.get().then(function (d) {
-          var count
-          if (!d.exists) { //has no data, initialize count
-            if (increaseCount) {
-              doc.set({
-                count: 1
-              })
-              count = 1
-            }
-            else {
-              count = 0
-            }
-          }
-          else { //has data
-            count = d.data().count
-            if (increaseCount) {
-              if (!(window.localStorage && window.localStorage.getItem(title))) { //if first view this article
-                doc.set({ //increase count
-                  count: count + 1
-                })
-                count++
-              }
-            }
-          }
-          if (window.localStorage && increaseCount) { //mark as visited
-            localStorage.setItem(title, true)
-          }
-
-          return count
-        })
-      }
-
-      function appendCountTo(el) {
-        return function (count) {
-          $(el).append(
-            $('<span>').addClass('post-visitors-count').append(
-              $('<span>').addClass('post-meta-divider').text('|')
-            ).append(
-              $('<span>').addClass('post-meta-item-icon').append(
-                $('<i>').addClass('fa fa-users')
-              )
-              ).append($('<span>').text('阅读次数 ' + count))
-          )
-        }
-      }
-
-      var db = firebase.firestore()
-      var articles = db.collection('articles')
-
-      //https://hexo.io/zh-tw/docs/variables.html
-      var isPost = ''.length > 0
-      var isArchive = '' === 'true'
-      var isCategory = ''.length > 0
-      var isTag = ''.length > 0
-
-      if (isPost) { //is article page
-        var title = ''
-        var doc = articles.doc(title)
-
-        getCount(doc, true).then(appendCountTo($('.post-meta')))
-      }
-      else if (!isArchive && !isCategory && !isTag) { //is index page
-        var titles = [] //array to titles
-
-        var postsstr = 'titles.push("深度学习识别验证码");titles.push("Vue2.0 学习笔记");titles.push("Docker镜像的基本操作");titles.push("通过函数指针进行初始化");titles.push("梯度下降(吴恩达公开课笔记)");titles.push("时间序列算法");titles.push("机器学习简介");titles.push("Logistic函数");titles.push("基于RK3188平台与Android5.1的AP6212蓝牙与wifi调试记录");titles.push("数据质量分析");' //if you have a better way to get titles of posts, please change it
-        eval(postsstr)
-
-        var promises = titles.map(function (title) {
-          return articles.doc(title)
-        }).map(function (doc) {
-          return getCount(doc)
-        })
-        Promise.all(promises).then(function (counts) {
-          var metas = $('.post-meta')
-          counts.forEach(function (val, idx) {
-            appendCountTo(metas[idx])(val)
-          })
-        })
-      }
-    })()
-  </script>
-
-
-  
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
 </script>
 
-
-  
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
-
-  
-  
-  <script src="/lib/needsharebutton/needsharebutton.js"></script>
-
-  <script>
-    
-      pbOptions = {};
-      
-          pbOptions.iconStyle = "box";
-      
-          pbOptions.boxForm = "horizontal";
-      
-          pbOptions.position = "bottomCenter";
-      
-          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-postbottom', pbOptions);
-    
-    
-      flOptions = {};
-      
-          flOptions.iconStyle = "box";
-      
-          flOptions.boxForm = "horizontal";
-      
-          flOptions.position = "middleRight";
-      
-          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-float', flOptions);
-    
-  </script>
-
-  
-
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
         for (i=0; i < all.length; i += 1) {
           all[i].SourceElement().parentNode.className += ' has-jax';
         }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.3"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.3"></script>
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=6.3.0"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=6.3.0"></script>
 
 
   
+
+  
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
 </body>
 </html>
